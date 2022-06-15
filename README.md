@@ -1,3 +1,5 @@
+Challenge website - https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL
+
 # Coding Bootcamp Testimonials Slider
 
 ![Design preview for the Coding Bootcamp Testimonials Slider coding challenge](./design/desktop-preview.jpg)
