@@ -1,3 +1,5 @@
+Link to live page - https://garrettsiegel.github.io/testimonials-slider/
+
 Challenge website - https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL
 
 # Coding Bootcamp Testimonials Slider
