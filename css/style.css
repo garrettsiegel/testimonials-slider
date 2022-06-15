@@ -1,0 +1,251 @@
+/**************/
+/**** Main ****/
+/**************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  :root {
+    --DarkBlue: hsl(240, 38%, 20%);
+    --GrayishBlue: hsl(240, 18%, 77%);
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+    color: var(--DarkBlue);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/pattern-curve.svg");
+    background-size: 50%; 
+    background-position: bottom left;
+    background-repeat: no-repeat;
+  }
+  
+  /**************/
+  /* Typography */
+  /**************/
+  
+  .quote {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  
+  .title {
+    color: var(--GrayishBlue);
+    font-weight: 500;
+  }
+  
+  .name {
+    font-weight: 700;
+  }
+  
+  .title, .name {
+    display: inline-block;
+  }
+  
+  .name-block {
+    margin-top: 2em;
+  }
+  
+  /**************/
+  /*** Slider ***/
+  /**************/
+  
+  /* Hide items */
+  .slider .slider-item-left,
+  .slider .slider-item-left-hidden,
+  .slider .slider-item-right,
+  .slider .slider-item-right-hidden {
+    display: none;
+  }
+  
+  /* Show items */
+  .slider .slider-item-left-visible,
+  .slider .slider-item-right-visible {
+    display: block;
+  }
+  
+  .slider {
+    height: 80vh;
+    width: 80vw;
+  }
+  
+  .slide-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  /*************/
+  /* Left Side */
+  /*************/
+  
+  .text-left {
+    position: absolute;
+    z-index: 2;
+    width: 45vw;
+    height: 80vh;
+    margin: auto;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 1;
+  }
+  
+  .text-flex {
+    position: relative;
+  }
+  
+  #quotes-image {
+    position: absolute;
+    top: -27%;
+    left: 16%;
+  }
+  
+  /**************/
+  /* Right Side */
+  /**************/
+  
+  .images-right-block {
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    order: 2;
+  }
+  
+  .images-right {
+    height: 80vh;
+    width: 50vw;
+    background-image: url("/images/pattern-bg.svg");
+    background-size:     contain;                      
+    background-repeat:   no-repeat;
+    background-position: center center;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  
+  .person-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    z-index: 1;
+    box-shadow: 0 10px 40px -10px hsla(240, 38%, 20%, 0.3);
+    border-radius: 5px;
+  }
+  
+  /*************/
+  /** Buttons **/
+  /*************/
+  
+  .buttons {
+    position: absolute;
+    background-color: #fff;
+    z-index: 3;
+    padding: .75em 1.25em;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px -10px hsla(240, 38%, 20%, 0.3);
+    bottom: 9%;
+    left: 22.5%;
+  }
+  
+  .buttons button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  #slider-button-prev {
+    margin-top: .25em;
+    margin-right: 1.25em;
+  }
+  
+  #slider-button-next {
+    margin-top: .25em;
+    margin-left: 1.25em;
+  }
+  
+  /*****************/
+  /* Media Queries */
+  /*****************/
+  
+  @media (max-width: 800px){
+  
+    .quote {
+      font-size: 1.1rem;
+      text-align: center;
+      letter-spacing: 1px;
+      line-height: 1.3;
+    }
+  
+    .title, .name {
+      display: block;
+    }
+  
+    .name-block {
+      margin-top: 1em;
+      text-align: center;
+    }
+  
+    .slider {
+      height: 95vh;
+      width: 90vw;
+    }
+  
+    .slide-container {
+      flex-direction: column;
+    }
+  
+    .text-left {
+      position: relative;
+      width: 100%;
+      height: 50%;
+      margin: auto;
+      align-items: start;
+      order: 2;
+      margin-top: 2.5em;
+    }
+  
+    #quotes-image {
+      transform: scale(0.5) translate(85%);
+    }
+  
+    .images-right-block {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      order: 1;
+    }
+  
+    .images-right {
+      height: 50%;
+      width: 100%;
+      display: flex;
+      padding: 2em;
+    }
+  
+    .person-image {
+      width: 90%;
+      position: relative;
+      right: 0;
+    }
+    
+    .buttons {
+      transform: scale(0.75) translate(50%, 0);
+      bottom: 2.5%;
+      z-index: 5;
+    }
+  
+  }
+  
